@@ -49,7 +49,7 @@ Any validation issues aside from an invalid ticket, should be communicated back 
 
 ```
 {
-  "validation":["invalid facility type","invalid action", "comments exceed allowable length"
+  "validation":["invalid facility type","invalid action", "comments exceed allowable length"]
 }
 ```
 ## HTTP 201
@@ -57,7 +57,7 @@ If the response is accepted but there is additional information that needs to be
 
 ```
 {
-  "validation":"Response accepted, but references are not supported and have been discarded"
+  "validation":["Response accepted, but references are not supported and have been discarded"]
 }
 ```
 
@@ -146,7 +146,7 @@ The POST to /response should always return a confirmation to the submitter for e
                   ],
                   "action": "MARKED",
                   "result":"accepted"
-                  "validation":"compliant"
+                  "validation":["compliant"]
             },
             {
                   "ticket": "200131-001002",
@@ -156,7 +156,7 @@ The POST to /response should always return a confirmation to the submitter for e
                   ],
                   "action": "MARKED",
                   "result": "rejected",
-                  "validation": "Duplicate responses are not allowed"
+                  "validation": ["Duplicate responses are not allowed"]
             }
       ]
 }
